@@ -1,0 +1,112 @@
+#pay-now-btn {
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.8em 2em;
+    background: -webkit-linear-gradient(45deg, #ff0000, #ff8000);
+    -webkit-text-fill-color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    transition: 3s;
+}
+
+#pay-now-btn:hover {
+    background: -webkit-linear-gradient(45deg, #ff8000, #ff0000);
+}
+
+.pay-now-container {
+    display: flex;
+    margin-top: 2em;
+}
+.pay-now-img, .pay-now-form {
+    width: 50%;
+}
+.pay-now-form > form {
+    display: flex;
+    flex-direction: column;
+    padding: 1.2em;
+    margin: 2em 5em;
+    box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+    width: 60%;
+}
+.pay-now-form > form > input {
+    height: 40px;
+    font-size: 1rem;
+    font-weight: 600;
+    padding-left: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px rgba(0,0,0,.12);
+}
+
+.pay-now-img > h2 {
+    margin: 0em 3em;
+    font-family: "Montserrat", sans-serif;
+    font-size: 2rem;
+    color: rgb(1, 1, 107);
+}
+.pay-now-img > h2 > span {
+    background: -webkit-linear-gradient(0deg, #fa2424, #fb8721);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-bottom: 1px solid red;
+}
+.img-to-insert {
+    padding: 1.2em;
+    margin: 3em 5em;
+    background: -webkit-linear-gradient(0deg, #ff8000, #ff0000);
+    -webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+    height: 450px;
+}
+
+.pay-now-form > form >img {
+    margin-left: 23%;
+}
+
+@media (max-width: 1024px) and (min-width: 900px) {
+    .pay-now-form > form {
+        margin: 1em 3em;
+        width: 70%;
+    }
+    .img-to-insert {
+        padding: 0.8em;
+    }
+    .pay-now-form > form > img {
+        margin-left: 19%;
+    }
+}
+
+@media (max-width: 900px) {
+    .pay-now-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .pay-now-img, .pay-now-form {
+        width: 100%;
+    }
+    .pay-now-form > form {
+        width: 75%;
+    }
+    .pay-now-form > form > img {
+        margin-left: 35%;
+    }
+}
+
+@media (max-width: 656px) {
+    .pay-now-form > form{
+        width: 80%;
+        margin: 1.5em;
+    }
+    .pay-now-form > form > img {
+        margin-left: 18%;
+    }
+    .pay-now-img > h2 {
+        margin: 0em 1em;
+    }
+    .img-to-insert {
+        margin: 1.5em;
+        padding: 0;
+    }
+}

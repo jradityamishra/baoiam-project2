@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="international-telephone-input.css" />
+    <title>International Telephone Input</title>
+    <link rel="stylesheet" href="otp.css" />
+
+    <style></style>
+  </head>
+  <body>
+    <div class="otp-section">
+      <div class="otp-box-wrapper">
+        <div class="otp-box1">
+          <div class="otpimg">
+            <img src="./13.jpg" alt="" srcset="" />
+          </div>
+        </div>
+        <div class="otp-box2">
+          <h1>
+            Crack your <span class="styledtext">goal</span> with India’s
+            <span class="styledtext">top</span> educators
+          </h1>
+          <p>Over 10 crore learners trust us for their preparation</p>
+          <div class="otp-generator-box">
+            <div class="iti">
+              <input type="tel" name="phone" id="phone" readonly />
+              <input type="number" name="" id="phonenumber" />
+            </div>
+            <div class="appoiintment-date">
+              <p>We'll send an OTP for verification</p>
+              <input
+                type="text"
+                name="appointment"
+                id="appointment"
+                placeholder="Select a Date"
+                onfocus="(this.type='date')"
+              />
+            </div>
+            <div id="enterOTPsection">
+              <input
+                type="text"
+                class="enterOTP"
+                placeholder="Enter Your OTP"
+              />
+              <button class="resendOTPbtn">resend OTP</button>
+            </div>
+            <button class="generateOTP" onclick="showenterOTP()">
+              Generate OTP
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./otp.js"></script>
+    <script src="international-telephone-input.js"></script>
+  </body>
+</html>

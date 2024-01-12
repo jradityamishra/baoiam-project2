@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pay Now</title>
+    <link href="./style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="pay-now-container">
+        <div class="pay-now-img">
+            <h2>Make your payment to <span>success!</span></h2>
+            <div class="img-to-insert"></div>
+        </div>
+        <div class="pay-now-form">
+            <form action>
+                <input type="text" name="name" placeholder="Your Name" required><br />
+
+                <input type="email" name="email" placeholder="Your Email" required><br />
+
+                <input type="text" name="mob" placeholder="Phone No." required><br />
+
+                <input type="text" name="trans" placeholder="Transaction ID" required><br />
+
+                <input type="text" name="utr" placeholder="UTR No." required><br />
+
+                <b><small>Scan the QR Code to make payment!</small></b><br />
+                <img src="./qr-code.jpg" height="200px" width="200px" alt="QR Code to be scanned"><br />
+
+                <input type="submit" value="Pay Now" id="pay-now-btn">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,10 +1,12 @@
-import express from 'express'
-import colors from 'colors'
+import express from 'express';
+import colors from 'colors';
 import dotenv from 'dotenv';
 import morgan from 'morgan';
 import Connectdb from './database/db.js';
-import cors from 'cors'
+import authRoutes from './route/authRoute.js';
+import cors from 'cors';
 import bodyParser from 'body-parser';
+
 //Routes
 import apiRoutes from './route/apiRoute.js'
 
@@ -27,7 +29,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(bodyParser.urlencoded({ extended: false }));
 
 //Routes
-app.use('api/v1', apiRoutes)
+app.use('/api/v1',apiRoutes);
 
 
 //rest api
@@ -35,7 +37,7 @@ app.get('/', (req, resp) => {
     resp.send({
         msg: 'welcome to boaim site'
     })
-})
+});
 
 
 //PORT

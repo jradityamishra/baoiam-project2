@@ -1,0 +1,205 @@
+ul {
+  top: 100% !important;
+  transform: translateY(0%) !important;
+}
+
+.styledtext {
+  position: relative;
+  background: -webkit-linear-gradient(0deg, #fa2424, #fb8721);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-bottom: 2px solid rgb(245, 69, 0);
+}
+
+.otp-generator-box {
+  width: 90%;
+  /* margin: auto; */
+}
+
+.iti {
+  width: 100%;
+  position: relative;
+  display: inline-block;
+}
+
+#phone {
+  outline: none;
+  /* padding-right: 6px; */
+  padding-left: 52px;
+  margin-left: 0;
+
+  position: absolute;
+  left: 0;
+  z-index: 0;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  margin-right: 0;
+  border: 1px solid rgb(4, 0, 82);
+
+  width: 100px;
+  height: 50px;
+
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: 100%;
+  color: inherit;
+  border-right: none;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  background-color: gainsboro;
+}
+
+#phonenumber {
+  /* outline: -webkit-linear-gradient(0deg, #fa2424, #fb8721); */
+  height: 50px;
+  outline: none;
+  width: 100%;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  padding-left: 120px;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  margin-right: 0;
+  border: 1px solid rgb(4, 0, 82);
+  border-radius: 5px;
+}
+
+#phonenumber:focus {
+  border: 2px solid #fb8721;
+}
+
+#phonenumber:focus ~ #phone {
+  border: 1px solid #fb8721;
+}
+
+.otp-section {
+  position: relative;
+  padding: 3rem 6%;
+}
+
+.otp-box-wrapper {
+  display: flex;
+}
+
+.otp-box1 {
+  flex: 1;
+}
+
+.otpimg {
+  position: relative;
+}
+
+.otpimg img {
+  width: 90%;
+}
+
+.otp-box2 {
+  flex: 1;
+  position: relative;
+}
+
+.otp-box2 h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 70px;
+  letter-spacing: 0.02em;
+  color: rgb(4, 0, 82);
+}
+
+.otp-box2 p {
+  font-size: 1.2rem;
+}
+
+.appoiintment-date {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.appoiintment-date p {
+  font-size: 1rem;
+}
+
+.appoiintment-date input {
+  border: 2px solid #fb8721;
+  font-size: 1rem;
+  /* padding-left: 52px; */
+  height: 50px;
+  border: 1px solid rgb(4, 0, 82);
+  width: 150px;
+  border-radius: 5px;
+  padding-left: 25px;
+}
+
+#enterOTPsection {
+  display: none;
+}
+
+.resendOTPbtn {
+  display: block;
+  float: right;
+  font-size: 1rem;
+  text-decoration: underline;
+  color: rgb(4, 0, 82);
+  background: none;
+  outline: none;
+  border: none;
+}
+
+.enterOTP {
+  width: 100%;
+  height: 50px;
+  border: 1px solid rgb(4, 0, 82);
+  border-radius: 5px;
+  font-size: 1rem;
+  padding: 0 2.9%;
+  margin-bottom: 1rem;
+}
+
+.enterOTP:focus {
+  border: 2px solid #fb8721;
+}
+
+.generateOTP {
+  margin-top: 2rem;
+  border: 1px solid rgb(4, 0, 82);
+  width: 180px;
+  height: 50px;
+  background: none;
+  font-size: 16px;
+  transition: 0.5s;
+}
+
+.generateOTP:hover {
+  background: rgb(4, 0, 82);
+  color: white;
+}
+
+#bookappointmentbtn {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-image: linear-gradient(45deg, #ff8000, #ff0000);
+  cursor: pointer;
+  border: none;
+  width: 100%;
+  height: 50px;
+}
+
+@media (width<=955px) {
+  .otp-section {
+    padding: 3rem 10%;
+  }
+  .otp-box-wrapper {
+    flex-direction: column;
+    gap: 5rem;
+  }
+
+  .otp-generator-box {
+    width: 100%;
+    /* margin: auto; */
+  }
+}

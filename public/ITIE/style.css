@@ -1,0 +1,113 @@
+/* .intern-reviews .carousel {
+display: flex;
+width: 220%;
+padding: 20px 0;
+height: 520px;
+} */
+/* .intern-reviews{
+    border: 4px solid black;
+
+} */
+
+.intern-reviews .slider {
+  /* border: 4px solid green; */
+  display: grid;
+  place-items: center;
+  margin: auto;
+  overflow: hidden;
+}
+
+.intern-reviews .carousel__face {
+  width: 560px;
+  height: 380px;
+  /* margin-right: 50px;
+margin-top: 20px; */
+  margin: 20px;
+  padding: 15px 15px 0 0;
+  position: relative;
+  /* box-shadow: 0px 6px 10px rgba(250, 36, 36, 1); */
+  border: 11.5px solid rgba(250, 36, 36, 1);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 1s ease-in-out;
+}
+
+.intern-reviews .carousel__face:hover {
+  transform: scale(1.1);
+}
+
+.carousel__face .info {
+  display: flex;
+  justify-content: space-around;
+}
+
+.carousel__face img {
+  width: 120px;
+  border-radius: 10px;
+}
+h3 {
+  margin: 0;
+}
+
+.intern-reviews .heading-container h1 {
+  margin: 0 0;
+  font-family: "Open Sans";
+  text-align: center;
+  font-weight: 900;
+  font-size: 40px;
+  color: #031864;
+  margin-bottom: 20px;
+}
+
+.intern-reviews .heading-container h2 {
+  margin: 0 0;
+  margin-top: 20px;
+  font-family: "Open Sans";
+  text-align: center;
+  font-weight: 500;
+  color: #031864;
+}
+
+.intern-reviews .heading-container h1 span {
+  background-image: linear-gradient(45deg, #fb8721, #fa2424);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+.carousel__face .review-content {
+  padding-left: 18px;
+}
+
+/* .intern-reviews .mobile_container{
+display: none;
+} */
+
+.carousel__face .curve {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-image: linear-gradient(45deg, #fb8721, #fa2424);
+}
+
+.intern-reviews .slide-track {
+  animation: scroll 20s linear infinite;
+  width: calc(340px * 18);
+  /* border: 2px solid rgb(255, 0, 208); */
+  display: flex;
+}
+
+.intern-reviews .slide-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-340px * 9));
+  }
+}
