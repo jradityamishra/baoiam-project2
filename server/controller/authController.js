@@ -1,6 +1,7 @@
 import { comparePassword, hashPassword } from "../helper/authHelper.js";
 import userModels from "../model/userSchema.js";
 import JWT from "jsonwebtoken";
+import { postObject } from "../helper/s3/s3lectureUpload.js"
 
 export const registerController = async (req, res) => {
   try {
@@ -39,7 +40,6 @@ export const registerController = async (req, res) => {
     const hashedPassword = await hashPassword(password);
 
     const user = await new userModels({
-
       email,
       userName,
       password: hashedPassword,
@@ -131,3 +131,31 @@ export const testController = (req, res) => {
     res.send({ error });
   }
 };
+
+
+export const updatedProfile = async (req, res) => {
+  console.log(req.params.id)
+  const { firstname, middlename, lastname, phone, collegeName, GraduatingYear, bio } = req.body;
+  const lectureUrl = req.file;
+  console.log(req.file)
+  const videoname = req.file.originalname;
+  try {
+    const get = await postObject(videoname, lectureUrl);
+    console.log(get)
+    const updatedprofile = await userModels.findByIdAndUpdate(req.params.id, {
+      firstname: firstname ? firstname : '',
+      middlename: middlename ? middlename : " ",
+      lastname: lastname ? lastname : '',
+      phone: phone ? phone : "",
+      collegeName: collegeName ? collegeName : '',
+      GraduatingYear: GraduatingYear ? GraduatingYear : '',
+      bio: bio ? bio : '',
+      image: get ? get : ''
+    });
+    console.log(updatedprofile)
+    res.status(200).json(updatedprofile);
+  } catch (error) {
+    console.log(error);
+    res.status(404).json({ msg: "Internal Server Error" });
+  }
+}

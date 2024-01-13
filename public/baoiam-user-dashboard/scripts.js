@@ -1,3 +1,4 @@
+var logo = document.getElementById('logo');
 var profile = document.getElementById('profile');
 var course = document.getElementById('course');
 var certificate = document.getElementById('certificate');
@@ -12,16 +13,16 @@ var editDetails = document.getElementById('edit-details');
 var closeForm = document.getElementById('close-details-section')
 var activeHai = document.getElementsByClassName('activeHai')
 
-editDetails.addEventListener('click',() => {
-    formContent.style.display='block';
-    blackshadow.style.display='block';
+editDetails.addEventListener('click', () => {
+    formContent.style.display = 'block';
+    blackshadow.style.display = 'block';
 })
-closeForm.addEventListener('click',() => {
-    formContent.style.display='none'
-    blackshadow.style.display='none';
+closeForm.addEventListener('click', () => {
+    formContent.style.display = 'none'
+    blackshadow.style.display = 'none';
 
 })
-profile.addEventListener('click' , () => {
+profile.addEventListener('click', () => {
     profileDetails.style.display = "block";
     CourseDetails.style.display = "none";
     certi_section.style.display = "none";
@@ -32,7 +33,7 @@ profile.addEventListener('click' , () => {
     liveClasses.classList.remove("activeHai");
 
 });
-course.addEventListener('click' , () => {
+course.addEventListener('click', () => {
     profileDetails.style.display = "none";
     CourseDetails.style.display = "block";
     certi_section.style.display = "none";
@@ -43,7 +44,7 @@ course.addEventListener('click' , () => {
     liveClasses.classList.remove("activeHai");
 
 });
-certificate.addEventListener('click' , () => {
+certificate.addEventListener('click', () => {
     profileDetails.style.display = "none";
     CourseDetails.style.display = "none";
     certi_section.style.display = "block";
@@ -54,7 +55,7 @@ certificate.addEventListener('click' , () => {
     liveClasses.classList.remove("activeHai");
 
 });
-liveClasses.addEventListener('click' , () => {
+liveClasses.addEventListener('click', () => {
     profileDetails.style.display = "none";
     CourseDetails.style.display = "none";
     certi_section.style.display = "none";
@@ -65,3 +66,8 @@ liveClasses.addEventListener('click' , () => {
     liveClasses.classList.add("activeHai");
 
 });
+
+logo.addEventListener('click', () => {
+    window.location.href = "index.html"
+})
+

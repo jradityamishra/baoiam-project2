@@ -28,6 +28,7 @@
 }
 .aside .image img {
   width: 150px;
+ 
 }
 .ProfileAndName {
   width: 100%;
@@ -104,7 +105,7 @@
   /* background-color: rgb(202, 202, 202); */
   box-shadow: 8px 12px 12px gray;
 }
-.activeHai{
+.activeHai {
   box-shadow: 4px 8px 8px rgb(255, 106, 7);
 }
 .links .link a span {

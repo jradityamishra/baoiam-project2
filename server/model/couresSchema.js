@@ -17,26 +17,18 @@ const courseSchema = new mongoose.Schema({
     ref: 'User', // Reference to the User model (instructor)
 
   },
-  // modules: [{
-  //   title: {
-  //     type: String,
-  //     required: true,
-  //   },
-  //   lessons: [{
-  //     title: {
-  //       type: String,
-  //       required: true,
-  //     },
-  //     content: {
-  //       type: String,
-  //       required: true,
-  //     },
-  //   }],
-  // }],
-  studentsEnrolled: [{
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'User', // Reference to the User model (student)
-  }],
+  image: {
+    type: String,
+
+  },
+  price: {
+    type: Number,
+    require: true
+  },
+  offer: {
+    type: String
+
+  }
 
   // Add more fields as needed, such as duration, prerequisites, etc.
 }, { timestamps: true });
